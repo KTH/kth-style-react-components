@@ -1,20 +1,39 @@
 {
-  "name": "kth-style-react-components",
-  "version": "0.1.0",
+  "name": "@kth/kth-style-react-components",
+  "version": "0.0.1",
+  "description": "Library with react components implemented with KTH style ",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "NODE_ENV=development node_modules/mocha/bin/mocha ./test/test-*.js ./test/**/test-*.js",
+    "build": "npm install && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KTH/kth-style-react-components"
+  },
+  "keywords": [
+    "npm",
+    "kth"
+  ],
+  "author": {
+    "name": "KTH",
+    "email": "infosys@kth.se",
+    "url": "https://github.com/KTH"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/KTH/kth-style-react-components/issues"
+  },
+  "homepage": "https://github.com/KTH/kth-style-react-components#readme",
+  "devDependencies": {
     "classnames": "^2.2.5",
     "kth-style": "^4.0.7",
     "react": "^16.8.6",
     "react-scripts": "3.0.0",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
