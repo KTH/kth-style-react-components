@@ -12,6 +12,7 @@ const isWorking = () => {
  * Public exports
  */
 module.exports = {
+  isWorking: isWorking,
   Collapse: Collapse,
   Alert: Alert
 }
