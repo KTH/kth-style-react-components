@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "npm i",
-    "test": "react-scripts test"
+    "test": "CI=true react-scripts test"
   },
   "repository": {
     "type": "git",
