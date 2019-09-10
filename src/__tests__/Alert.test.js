@@ -1,0 +1,19 @@
+import React from "react";
+import renderer from "react-test-renderer";
+import Alert from "../Alert"
+
+const TEST_DATA = {
+  color: "success",
+  string: "This is a test string that should render inside alert component"
+}
+
+describe("Alert", () => {
+  it("renders properly", () => {
+    const tree = renderer
+      .create(<Alert color={TEST_DATA.color}>
+        <p>{TEST_DATA.srting}</p>
+      </Alert>).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});

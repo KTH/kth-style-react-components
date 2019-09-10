@@ -1,8 +1,12 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Library with react components implemented with KTH style ",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "npm i",
@@ -35,8 +39,8 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
     "reactstrap": "^8.0.1",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "babel-cli": "^6.26.0",
+    "react-test-renderer": "^16.3.2"
   },
   "peerDependencies": {
     "react": ">= 16.3.0",

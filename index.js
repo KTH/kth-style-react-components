@@ -1,18 +1,4 @@
-import Collapse from './src/Collapse';
-import Alert from './src/Alert';
+import Alert from "./src/Alert";
+import Collapse from "./src/Collapse";
 
-/**
- * Is it really working?
- */
-const isWorking = () => {
-  return true;
-};
-
-/**
- * Public exports
- */
-module.exports = {
-  isWorking: isWorking,
-  Collapse: Collapse,
-  Alert: Alert
-}
+export { Alert, Collapse };
