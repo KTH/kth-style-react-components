@@ -5,7 +5,7 @@
 const expect = require("chai").expect;
 
 // Import your module to test against.
-const index = require("../index");
+const index = require("../../index");
 
 // Organize your tests in areas.
 describe("Type of tests header", function() {

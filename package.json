@@ -4,8 +4,10 @@
   "description": "Library with react components implemented with KTH style ",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=development node_modules/mocha/bin/mocha ./test/test-*.js ./test/**/test-*.js",
-    "build": "npm install && npm test"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "classnames": "^2.2.5",
     "kth-style": "^4.0.7",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
     "reactstrap": "^8.0.1",
     "chai": "^4.2.0",

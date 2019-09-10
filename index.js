@@ -1,4 +1,5 @@
-  "use strict";
+import Collapse from './src/Collapse';
+import Alert from './src/Alert';
 
 /**
  * Is it really working?
@@ -11,5 +12,7 @@ const isWorking = () => {
  * Public exports
  */
 module.exports = {
-  isWorking: isWorking
+  isWorking: isWorking,
+  Collapse: Collapse,
+  Alert: Alert
 }
