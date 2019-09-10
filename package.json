@@ -1,6 +1,6 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library with react components implemented with KTH style ",
   "main": "index.js",
   "scripts": {
@@ -37,5 +37,9 @@
     "reactstrap": "^8.0.1",
     "chai": "^4.2.0",
     "mocha": "^6.2.0"
+  },
+  "peerDependencies": {
+    "react": ">= 16.3.0",
+    "react-dom": ">= 16.3.0"
   }
 }
