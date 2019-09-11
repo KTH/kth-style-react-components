@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Alert from "../Alert"
+import Alert from "../lib/Alert"
 
 const TEST_DATA = {
   color: "success",
