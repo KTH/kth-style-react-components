@@ -1,3 +1,4 @@
+var _jsxFileName = "/Users/saraervik/Projects/R2M/KTH/kth-style-react-components/src/lib/Alert.js";
 import React from 'react';
 import classNames from 'classnames';
 
@@ -7,7 +8,12 @@ var Alert = function Alert(props) {
   return React.createElement("div", {
     "aria-live": "polite",
     role: "alert",
-    "class": classes
+    "class": classes,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
   }, props.children);
 };
 

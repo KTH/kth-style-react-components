@@ -4,6 +4,7 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
+var _jsxFileName = "/Users/saraervik/Projects/R2M/KTH/kth-style-react-components/src/lib/Collapse.js";
 import React from 'react';
 import { Collapse as BootstrapCollapse } from 'reactstrap';
 import classNames from 'classnames';
@@ -47,18 +48,43 @@ function (_React$Component) {
       } // Default color is blue
       );
       return React.createElement("div", {
-        className: classes
+        className: classes,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
       }, React.createElement("div", {
         "class": "card-header",
-        role: "tab"
+        role: "tab",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
       }, React.createElement("a", {
         onClick: this.toggleHeader,
         "aria-expanded": this.state.isOpen,
-        load: this.state.firstLoad
+        load: this.state.firstLoad,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
       }, this.props.buttonText)), React.createElement(BootstrapCollapse, {
-        isOpen: this.state.isOpen
+        isOpen: this.state.isOpen,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
       }, React.createElement("div", {
-        "class": "card-body"
+        "class": "card-body",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
       }, this.props.children)));
     }
   }]);

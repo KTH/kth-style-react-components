@@ -1,15 +1,11 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
-  "module": "dist/index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "test": "CI=true react-scripts test",
-    "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+    "build": "npm i && NODE_ENV=development babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "repository": {
     "type": "git",
