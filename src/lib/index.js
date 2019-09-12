@@ -1,2 +1,3 @@
 import Alert from "./Alert";
-export { Alert };
+import Collapse from "./Collapse";
+export { Alert, Collapse };
