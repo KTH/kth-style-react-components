@@ -1,4 +1,10 @@
-import Alert from "./lib/Alert";
-import Collapse from "./lib/Collapse";
+import React from 'react';
+import { render } from "react-dom";
 
-export { Alert, Collapse };
+const App = () => (
+  <div style={{ width: 640, margin: "15px auto" }}>
+    <h1>Hello React</h1>
+  </div>
+);
+
+render(<App />, document.getElementById("root"));

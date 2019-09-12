@@ -1,6 +1,6 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -10,7 +10,6 @@
   "scripts": {
     "start": "react-scripts start",
     "test": "CI=true react-scripts test",
-    "eject": "react-scripts eject",
     "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "repository": {
@@ -34,15 +33,14 @@
   },
   "homepage": "https://github.com/KTH/kth-style-react-components#readme",
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
     "classnames": "^2.2.5",
     "kth-style": "^4.0.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
+    "react-scripts": "^3.1.1",
+    "react-test-renderer": "^16.9.0",
     "reactstrap": "^8.0.1",
-    "babel-cli": "^6.26.0",
-    "react-test-renderer": "^16.3.2",
-    "babel-preset-react-app": "^9.0.1",
     "rimraf": "^3.0.0"
   },
   "peerDependencies": {
