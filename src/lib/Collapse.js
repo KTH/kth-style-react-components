@@ -31,7 +31,9 @@ class Collapse extends React.Component {
 
     return <div className={classes}>
       <div class="card-header" role="tab" >
-        <a onClick={this.toggleHeader} aria-expanded={this.state.isOpen} load={this.state.firstLoad}>{this.props.buttonText}</a>
+        <h4 className='mb-0'>
+          <a href='#' onClick={this.toggleHeader} aria-expanded={this.state.isOpen} load={this.state.firstLoad}>{this.props.buttonText}</a>
+        </h4>
       </div>
       <BootstrapCollapse isOpen={this.state.isOpen}>
         <div class='card-body'>
