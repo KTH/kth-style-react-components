@@ -56,7 +56,7 @@ class FileInput extends Component {
 
     return <span className='file-uploader-section'>
         {/* label-Button is to make label compatible with keyborad/mouse and behave as button  */}
-      <label for={id} onClick={this.clickFileInput}>
+      <label htmlFor={id} onClick={this.clickFileInput}>
         <Button color='secondary' block><h4>{btnLabel}</h4></Button>
       </label>
         {/* tabIndex='-1' skip if user use tab because label takes all action */}
