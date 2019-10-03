@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collapse default color should be blue 1`] = `
+<div
+  className="card collapsible blue"
+>
+  <div
+    class="card-header"
+    role="tab"
+  >
+    <h4
+      className="mb-0"
+    >
+      <a
+        aria-expanded={false}
+        href="#"
+        load="true"
+        onClick={[Function]}
+      >
+        Click me
+      </a>
+    </h4>
+  </div>
+  <div
+    className="collapse"
+    style={Object {}}
+  >
+    <div
+      class="card-body"
+    >
+      <p>
+        This is a test string that should render inside collapse component
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Collapse should be white when given props color=white 1`] = `
+<div
+  className="card collapsible white"
+>
+  <div
+    class="card-header"
+    role="tab"
+  >
+    <h4
+      className="mb-0"
+    >
+      <a
+        aria-expanded={false}
+        href="#"
+        load="true"
+        onClick={[Function]}
+      >
+        Click me
+      </a>
+    </h4>
+  </div>
+  <div
+    className="collapse"
+    style={Object {}}
+  >
+    <div
+      class="card-body"
+    >
+      <p>
+        This is a test string that should render inside collapse component
+      </p>
+    </div>
+  </div>
+</div>
+`;
