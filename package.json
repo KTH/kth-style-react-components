@@ -1,10 +1,11 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
   "scripts": {
     "test": "CI=true react-scripts test",
+    "update-snapshots": "CI=true react-scripts test -u",
     "build": "npm i && NODE_ENV=development babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "repository": {
@@ -41,5 +42,9 @@
   "peerDependencies": {
     "react": ">= 16.3.0",
     "react-dom": ">= 16.3.0"
+  },
+  "dependencies": {
+    "kth-node-cortina-block": "^3.0.5",
+    "kth-node-log": "^3.0.2"
   }
 }
