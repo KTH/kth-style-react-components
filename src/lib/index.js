@@ -3,5 +3,13 @@ import Collapse from './Collapse'
 import ButtonModal from './ButtonModal'
 import FileInput from './FileInput'
 import Footer from './Footer'
+import Header from './Header'
 
-export { Alert, Collapse, ButtonModal, FileInput, Footer }
+export {
+    Alert,
+    ButtonModal,
+    Collapse,
+    FileInput,
+    Footer,
+    Header
+}

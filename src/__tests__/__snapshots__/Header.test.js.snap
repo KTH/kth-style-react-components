@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match previous snapshot 1`] = `
+<header
+  role="banner"
+>
+  <div
+    className="container-fluid"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="header-container__top"
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+      <div
+        className="header-container__bottom"
+      >
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    id="gradientBorder"
+  />
+</header>
+`;
