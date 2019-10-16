@@ -46,7 +46,7 @@ class Header extends React.Component {
 }
 
 Header.defaultProps = {
-  url: 'https://www-r.referens.sys.kth.se/cm/',
+  url: 'https://www.kth.se/cm/',
 }
 
 export default Header

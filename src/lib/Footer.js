@@ -20,7 +20,7 @@ class Footer extends React.Component {
 }
 
 Footer.defaultProps = {
-  url: 'https://www-r.referens.sys.kth.se/cm/',
+  url: 'https://www.kth.se/cm/',
 };
 
 export default Footer
