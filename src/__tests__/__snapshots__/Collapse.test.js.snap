@@ -22,6 +22,7 @@ exports[`Collapse default color should be blue 1`] = `
     </h4>
   </div>
   <div
+    aria-expanded="false"
     className="collapse"
     style={Object {}}
   >
@@ -58,6 +59,7 @@ exports[`Collapse should be white when given props color=white 1`] = `
     </h4>
   </div>
   <div
+    aria-expanded="false"
     className="collapse"
     style={Object {}}
   >
