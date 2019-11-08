@@ -5,7 +5,7 @@ KTH Style - React Components
 
 ## Description
 
-This project is a work in progress. The purpose is to create an easy to use library with common components implemented with KTH style.
+This project is a work in progress. The purpose is to create an easy to use library in React with common components implemented with KTH style.
 
 
 .
