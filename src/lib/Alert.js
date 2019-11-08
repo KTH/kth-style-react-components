@@ -1,8 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Alert = (props) => {
-
+const Alert = props => {
   const classes = classNames(
     'alert',
     props.color === 'success' && 'alert-success',
@@ -10,9 +9,11 @@ const Alert = (props) => {
     (props.color === 'info' || !props.color) && 'alert-info' // default value is info
   )
 
-  return <div aria-live='polite' role='alert' class={classes}>
-    {props.children}
-  </div>
+  return (
+    <div aria-live="polite" role="alert" class={classes}>
+      {props.children}
+    </div>
+  )
 }
 
 export default Alert

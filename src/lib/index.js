@@ -5,11 +5,4 @@ import FileInput from './FileInput'
 import Footer from './Footer'
 import Header from './Header'
 
-export {
-    Alert,
-    ButtonModal,
-    Collapse,
-    FileInput,
-    Footer,
-    Header
-}
+export { Alert, ButtonModal, Collapse, FileInput, Footer, Header }

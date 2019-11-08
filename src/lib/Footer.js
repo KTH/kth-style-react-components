@@ -8,19 +8,20 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    cortina({url: this.props.url})
-      .then(blocks => this.setState({ footer: blocks.footer }))
+    cortina({ url: this.props.url }).then(blocks => this.setState({ footer: blocks.footer }))
   }
 
-  render () {
-    return <footer role="contentinfo" className="container">
-      <div dangerouslySetInnerHTML={{__html: this.state.footer}} />
-    </footer>
+  render() {
+    return (
+      <footer role="contentinfo" className="container">
+        <div dangerouslySetInnerHTML={{ __html: this.state.footer }} />
+      </footer>
+    )
   }
 }
 
 Footer.defaultProps = {
-  url: 'https://www.kth.se/cm/',
-};
+  url: 'https://www.kth.se/cm/'
+}
 
 export default Footer

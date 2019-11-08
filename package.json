@@ -1,12 +1,13 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
   "scripts": {
     "test": "CI=true react-scripts test",
     "update-snapshots": "CI=true react-scripts test -u",
-    "build": "npm i && NODE_ENV=development babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+    "build": "npm i && NODE_ENV=development babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "codefix": "prettier --write 'src/lib/*.js'"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,10 @@
   "homepage": "https://github.com/KTH/kth-style-react-components#readme",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.1.1",

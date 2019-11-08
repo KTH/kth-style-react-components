@@ -1,13 +1,9 @@
 import React from 'react'
-import { Button,
-    Modal,
-    ModalBody,
-    ModalHeader,
-    ModalFooter } from 'reactstrap'
+import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap'
 import classNames from 'classnames'
 
 class ButtonModal extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -17,28 +13,28 @@ class ButtonModal extends React.Component {
     this.handleConfirm = this.handleConfirm.bind(this)
   }
 
-  toggle () {
+  toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     })
   }
 
-  _goBackToStartPage (returnToUrl) {
+  _goBackToStartPage(returnToUrl) {
     window.location = returnToUrl
   }
 
-  handleConfirm (event) {
+  handleConfirm(event) {
     event.preventDefault()
     if (this.props.type === 'cancel') this._goBackToStartPage(this.props.returnToUrl)
     else {
-    // return control to parent element function
+      // return control to parent element function
       this.props.handleParentConfirm()
-    // close modal
+      // close modal
       this.toggle()
     }
   }
 
-  render () {
+  render() {
     //* *** Properties *** *//
     // type: {info-icon, publish, cancel, remove}
     // btnLabel: t.e., 'Publish and quit', if it is info modal then no btnLabel need
@@ -51,20 +47,20 @@ class ButtonModal extends React.Component {
       btnConfirm: 'Yes, cancel',
     }
     */
-        //* *** example 1 SUBMIT*** *//
+    //* *** example 1 SUBMIT*** *//
     /*
     <ButtonModal id='publish' type='submit' btnLabel={introLabel.button.publish} handleParentConfirm={this.handlePublish}
         modalLabels={introLabel.info_publish} course={this.courseCode} alt={introLabel.alt.publish}
         disabled={this.state.hasDoneSubmit}
         />
     */
-        //* *** example 2 INFO ICON*** *//
+    //* *** example 2 INFO ICON*** *//
     /*
     <ButtonModal id='infoPic' type='info-icon'
         modalLabels={introLabel.info_image} course={this.courseCode} />
 
     */
-   /*
+    /*
     <ButtonModal id='cancelStep1' type='cancel' course={this.courseCode}
         returnToUrl={`${ADMIN_OM_COURSE}${this.courseCode}${CANCEL_PARAMETER}`}
         btnLabel={introLabel.button.cancel}
@@ -75,33 +71,43 @@ class ButtonModal extends React.Component {
     const { type, id, modalLabels, className } = this.props
     const { header, body, btnCancel, btnConfirm } = modalLabels
     const btnStyle = classNames(
-      {'btn-info-modal': type === 'info-icon'},
-      {'secondary': type === 'cancel'},
-      {'success': type === 'submit'},
-      {'danger': type === 'remove'}
+      { 'btn-info-modal': type === 'info-icon' },
+      { secondary: type === 'cancel' },
+      { success: type === 'submit' },
+      { danger: type === 'remove' }
     )
-    return <span className={className}>
-      <Button type='button' color={btnStyle} className={btnStyle}
-        disabled={this.props.disabled}
-        onClick={this.toggle}>
+    return (
+      <span className={className}>
+        <Button
+          type="button"
+          color={btnStyle}
+          className={btnStyle}
+          disabled={this.props.disabled}
+          onClick={this.toggle}
+        >
           {this.props.btnLabel}
-      </Button>
-      <Modal isOpen={this.state.isOpen} toggle={this.toggle} id={id}>
-        <ModalHeader toggle={this.toggle}>{header}</ModalHeader>
-        <ModalBody>
+        </Button>
+        <Modal isOpen={this.state.isOpen} toggle={this.toggle} id={id}>
+          <ModalHeader toggle={this.toggle}>{header}</ModalHeader>
+          <ModalBody>
             {this.props.children}
-            {body ? <p dangerouslySetInnerHTML={{__html: body}}></p> : ''}
-        </ModalBody>
-        <ModalFooter>
-          <Button color='secondary' onClick={this.toggle}>{btnCancel}</Button>
-            {
-              type === 'submit' || type === 'remove' || type === 'cancel'
-              ? <Button color='secondary' type={type} onClick={this.handleConfirm}>{btnConfirm}</Button>
-              : ''
-            }
-        </ModalFooter>
-      </Modal>
-    </span>
+            {body ? <p dangerouslySetInnerHTML={{ __html: body }}></p> : ''}
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={this.toggle}>
+              {btnCancel}
+            </Button>
+            {type === 'submit' || type === 'remove' || type === 'cancel' ? (
+              <Button color="secondary" type={type} onClick={this.handleConfirm}>
+                {btnConfirm}
+              </Button>
+            ) : (
+              ''
+            )}
+          </ModalFooter>
+        </Modal>
+      </span>
+    )
   }
 }
 

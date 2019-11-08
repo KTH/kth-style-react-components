@@ -3,7 +3,7 @@ import { Collapse as BootstrapCollapse } from 'reactstrap'
 import classNames from 'classnames'
 
 class Collapse extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -14,7 +14,7 @@ class Collapse extends React.Component {
     this.toggleHeader = this.toggleHeader.bind(this)
   }
 
-  toggleHeader () {
+  toggleHeader() {
     this.setState(state => ({
       isOpen: !state.isOpen,
       firstLoad: 'false'
@@ -25,22 +25,29 @@ class Collapse extends React.Component {
     const classes = classNames(
       'card',
       'collapsible',
-      {'white': this.props.color === 'white'},
-      {'blue': (this.props.color === 'blue' || !this.props.color)}, // Default color is blue
+      { white: this.props.color === 'white' },
+      { blue: this.props.color === 'blue' || !this.props.color } // Default color is blue
     )
 
-    return <div className={classes}>
-      <div class="card-header" role="tab" >
-        <h4 className='mb-0'>
-          <a href='#' onClick={this.toggleHeader} aria-expanded={this.state.isOpen} load={this.state.firstLoad}>{this.props.buttonText}</a>
-        </h4>
-      </div>
-      <BootstrapCollapse isOpen={this.state.isOpen}>
-        <div class='card-body'>
-          {this.props.children}            
+    return (
+      <div className={classes}>
+        <div class="card-header" role="tab">
+          <h4 className="mb-0">
+            <a
+              href="#"
+              onClick={this.toggleHeader}
+              aria-expanded={this.state.isOpen}
+              load={this.state.firstLoad}
+            >
+              {this.props.buttonText}
+            </a>
+          </h4>
         </div>
-      </BootstrapCollapse>
-    </div>        
+        <BootstrapCollapse isOpen={this.state.isOpen}>
+          <div class="card-body">{this.props.children}</div>
+        </BootstrapCollapse>
+      </div>
+    )
   }
 }
 
