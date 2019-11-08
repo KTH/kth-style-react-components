@@ -7,5 +7,32 @@ KTH Style - React Components
 
 This project is a work in progress. The purpose is to create an easy to use library in React with common components implemented with KTH style.
 
+## Get started
 
-.
+Install @kth/kth-style-react-components
+
+```
+npm i @kth/kth-style-react-components
+```
+
+Import the component in the file where you want to use it, in this example, we want to import Header
+
+```
+import { Header } from '@kth/kth-style-react-components'
+```
+
+Use it just like any React component
+
+Example:
+
+```
+import React from 'react'
+import { Header } from '@kth/kth-style-react-components'
+
+export const App = () => {
+  return <div>
+    <Header />
+    ...
+  </div>
+}
+```
