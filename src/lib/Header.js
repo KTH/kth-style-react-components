@@ -13,15 +13,22 @@ class Header extends React.Component {
     }
   }
   componentDidMount() {
-    cortina({ url: this.props.url }).then(blocks => {
+    cortina({ url: this.props.url, language: this.props.language }).then(blocks => {
       return this.setState({
         secondaryMenu: blocks.secondaryMenu,
         megaMenu: blocks.megaMenu,
         image: blocks.image,
-        title: blocks.title,
+        title: this.modifyTitle(blocks.title, this.props.appTitle, this.props.appLink),
         search: blocks.search
       })
     })
+  }
+
+  modifyTitle(cortinaBlock, appTitle, appLink) {
+    if (appTitle) {
+      return cortinaBlock.replace(/href=[^.]+<\/a>/, `href="${appLink}">${appTitle}</a>`)
+    }
+    return cortinaBlock
   }
 
   render() {
@@ -47,7 +54,10 @@ class Header extends React.Component {
 }
 
 Header.defaultProps = {
-  url: 'https://www.kth.se/cm/'
+  url: 'https://www.kth.se/cm/',
+  language: 'sv',
+  appTitle: '',
+  appLink: '/'
 }
 
 export default Header
