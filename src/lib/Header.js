@@ -12,6 +12,11 @@ class Header extends React.Component {
       search: ''
     }
   }
+
+  componentDidUpdate() {
+    this.componentDidMount()
+  }
+
   componentDidMount() {
     cortina({ url: this.props.url, language: this.props.language }).then(blocks => {
       return this.setState({
