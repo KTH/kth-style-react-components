@@ -8,7 +8,7 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    cortina({ url: this.props.url }).then(blocks => this.setState({ footer: blocks.footer }))
+    cortina({ url: this.props.url, language: this.props.language }).then(blocks => this.setState({ footer: blocks.footer }))
   }
 
   render() {
@@ -21,7 +21,8 @@ class Footer extends React.Component {
 }
 
 Footer.defaultProps = {
-  url: 'https://www.kth.se/cm/'
+  url: 'https://www.kth.se/cm/',
+  language: 'sv'
 }
 
 export default Footer
