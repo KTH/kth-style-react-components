@@ -8,7 +8,13 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    cortina({ url: this.props.url, language: this.props.language }).then(blocks => this.setState({ footer: blocks.footer }))
+    cortina({ url: this.props.url, language: this.props.language }).then(blocks =>
+      this.setState({ footer: blocks.footer })
+    )
+  }
+
+  componentDidUpdate() {
+    this.componentDidMount()
   }
 
   render() {

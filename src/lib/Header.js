@@ -36,20 +36,29 @@ class Header extends React.Component {
     return cortinaBlock
   }
 
+  concatinateHTML(section) {
+    if (section === 'top') {
+      return this.state.image + this.state.title + this.state.secondaryMenu
+    } else if (section === 'bottom') {
+      return this.state.megaMenu + this.state.search
+    } else {
+      return ''
+    }
+  }
+
   render() {
     return (
       <header role="banner">
         <div className="container-fluid">
           <div className="container">
-            <div className="header-container__top">
-              <div dangerouslySetInnerHTML={{ __html: this.state.image }} />
-              <div dangerouslySetInnerHTML={{ __html: this.state.title }} />
-              <div dangerouslySetInnerHTML={{ __html: this.state.secondaryMenu }} />
-            </div>
-            <div className="header-container__bottom">
-              <div dangerouslySetInnerHTML={{ __html: this.state.megaMenu }} />
-              <div dangerouslySetInnerHTML={{ __html: this.state.search }} />
-            </div>
+            <div
+              className="header-container__top"
+              dangerouslySetInnerHTML={{ __html: this.concatinateHTML('top') }}
+            />
+            <div
+              className="header-container__bottom"
+              dangerouslySetInnerHTML={{ __html: this.concatinateHTML('bottom') }}
+            />
           </div>
         </div>
         <div id="gradientBorder" />
