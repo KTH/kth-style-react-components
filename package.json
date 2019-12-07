@@ -1,6 +1,6 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.1.1",
+    "react-scripts": "3.3.0",
     "react-test-renderer": "^16.9.0",
     "rimraf": "^3.0.0"
   },
