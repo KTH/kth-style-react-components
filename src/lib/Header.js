@@ -2,8 +2,8 @@ import React from 'react'
 import cortina from 'kth-node-cortina-block'
 
 class Header extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       secondaryMenu: '',
       megaMenu: '',
@@ -11,10 +11,6 @@ class Header extends React.Component {
       title: '',
       search: ''
     }
-  }
-
-  componentDidUpdate() {
-    this.componentDidMount()
   }
 
   componentDidMount() {
