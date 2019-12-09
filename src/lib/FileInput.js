@@ -19,6 +19,13 @@ class FileInput extends Component {
 
   render () {
     /* accept = 'image/jpg,image/jpeg,image/png'
+      <FileInput id='pic-upload' onChange={this.parentFunctionDisplayValidatedPic}
+          accept='image/jpg,image/jpeg,image/png'
+          btnLabel='Välj bild'>
+          {this.isApiPicAvailable &&
+                 <Button color='secondary' onClick={this.resetToPrevApiPicture}>Återställ till sparad bild</Button>
+            }
+        </FileInput>
     */
     const { accept, id, btnLabel } = this.props
 
