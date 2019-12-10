@@ -96,7 +96,7 @@ class ButtonModal extends React.Component {
           </div>
           <ModalBody>
             {this.props.children}
-            {body ? <p dangerouslySetInnerHTML={{ __html: body }}></p> : ''}
+            {body && <p dangerouslySetInnerHTML={{ __html: body }}></p>}
           </ModalBody>
           <ModalFooter>
             <Button color='secondary' onClick={this.toggle}>
