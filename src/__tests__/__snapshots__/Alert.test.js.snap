@@ -6,6 +6,8 @@ exports[`Alert renders properly 1`] = `
   class="alert alert-success"
   role="alert"
 >
-  <p />
+  <p>
+    This is a test string that should render inside alert component
+  </p>
 </div>
 `;

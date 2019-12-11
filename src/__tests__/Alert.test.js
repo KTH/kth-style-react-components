@@ -11,7 +11,7 @@ describe("Alert", () => {
   it("renders properly", () => {
     const tree = renderer
       .create(<Alert color={TEST_DATA.color}>
-        <p>{TEST_DATA.srting}</p>
+        <p>{TEST_DATA.string}</p>
       </Alert>).toJSON();
 
     expect(tree).toMatchSnapshot();
