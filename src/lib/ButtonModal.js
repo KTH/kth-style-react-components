@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap'
+import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap'
 import classNames from 'classnames'
 
 class ButtonModal extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -13,17 +13,17 @@ class ButtonModal extends React.Component {
     this.handleConfirm = this.handleConfirm.bind(this)
   }
 
-  toggle() {
+  toggle () {
     this.setState({
       isOpen: !this.state.isOpen
     })
   }
 
-  _goBackToStartPage(returnToUrl) {
+  _goBackToStartPage (returnToUrl) {
     window.location = returnToUrl
   }
 
-  handleConfirm(event) {
+  handleConfirm (event) {
     event.preventDefault()
     if (this.props.type === 'cancel') this._goBackToStartPage(this.props.returnToUrl)
     else {
@@ -34,7 +34,7 @@ class ButtonModal extends React.Component {
     }
   }
 
-  render() {
+  render () {
     //* *** Properties *** *//
     // type: {info-icon, publish, cancel, remove}
     // btnLabel: t.e., 'Publish and quit', if it is info modal then no btnLabel need
@@ -79,7 +79,7 @@ class ButtonModal extends React.Component {
     return (
       <span className={className}>
         <Button
-          type="button"
+          type='button'
           color={btnStyle}
           className={btnStyle}
           disabled={this.props.disabled}
@@ -88,17 +88,22 @@ class ButtonModal extends React.Component {
           {this.props.btnLabel}
         </Button>
         <Modal isOpen={this.state.isOpen} toggle={this.toggle} id={id}>
-          <ModalHeader toggle={this.toggle}>{header}</ModalHeader>
+          <div className='modal-header h-4'>
+            <h4 className='modal-title'>{header}</h4>
+            <button type='button' className='close' aria-label='Close' onClick={this.toggle}>
+              <span aria-hidden='true'>×</span>
+            </button>
+          </div>
           <ModalBody>
             {this.props.children}
-            {body ? <p dangerouslySetInnerHTML={{ __html: body }}></p> : ''}
+            {body && <p dangerouslySetInnerHTML={{ __html: body }}></p>}
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={this.toggle}>
+            <Button color='secondary' onClick={this.toggle}>
               {btnCancel}
             </Button>
             {type === 'submit' || type === 'remove' || type === 'cancel' ? (
-              <Button color="secondary" type={type} onClick={this.handleConfirm}>
+              <Button color='secondary' type={type} onClick={this.handleConfirm}>
                 {btnConfirm}
               </Button>
             ) : (
