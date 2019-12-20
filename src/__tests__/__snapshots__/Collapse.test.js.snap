@@ -5,7 +5,7 @@ exports[`Collapse default color should be blue 1`] = `
   className="card collapsible blue"
 >
   <div
-    class="card-header"
+    className="card-header"
     role="tab"
   >
     <h4
@@ -27,7 +27,7 @@ exports[`Collapse default color should be blue 1`] = `
     style={Object {}}
   >
     <div
-      class="card-body"
+      className="card-body"
     >
       <p>
         This is a test string that should render inside collapse component
@@ -42,7 +42,7 @@ exports[`Collapse should be white when given props color=white 1`] = `
   className="card collapsible white"
 >
   <div
-    class="card-header"
+    className="card-header"
     role="tab"
   >
     <h4
@@ -64,7 +64,7 @@ exports[`Collapse should be white when given props color=white 1`] = `
     style={Object {}}
   >
     <div
-      class="card-body"
+      className="card-body"
     >
       <p>
         This is a test string that should render inside collapse component

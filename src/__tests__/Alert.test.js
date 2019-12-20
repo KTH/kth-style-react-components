@@ -8,7 +8,7 @@ const TEST_DATA = {
 }
 
 describe("Alert", () => {
-  it("renders properly", () => {
+  it ("renders properly", () => {
     const tree = renderer
       .create(<Alert color={TEST_DATA.color}>
         <p>{TEST_DATA.string}</p>

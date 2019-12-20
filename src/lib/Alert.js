@@ -10,7 +10,7 @@ const Alert = props => {
   )
 
   return (
-    <div aria-live="polite" role="alert" class={classes}>
+    <div aria-live="polite" role="alert" className={classes}>
       {props.children}
     </div>
   )

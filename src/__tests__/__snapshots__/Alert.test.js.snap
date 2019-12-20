@@ -3,7 +3,7 @@
 exports[`Alert renders properly 1`] = `
 <div
   aria-live="polite"
-  class="alert alert-success"
+  className="alert alert-success"
   role="alert"
 >
   <p>

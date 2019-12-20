@@ -31,7 +31,7 @@ class Collapse extends React.Component {
 
     return (
       <div className={classes}>
-        <div class="card-header" role="tab">
+        <div className="card-header" role="tab">
           <h4 className="mb-0">
             <a
               href="#"
@@ -44,7 +44,7 @@ class Collapse extends React.Component {
           </h4>
         </div>
         <BootstrapCollapse isOpen={this.state.isOpen}>
-          <div class="card-body">{this.props.children}</div>
+          <div className="card-body">{this.props.children}</div>
         </BootstrapCollapse>
       </div>
     )
