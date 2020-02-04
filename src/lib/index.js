@@ -5,6 +5,6 @@ import ActionModalButton from './ActionModalButton'
 import Footer from './Footer'
 import Header from './Header'
 import PageTitle from './PageTitle'
-import FooterStatic from './FooterStati'
+import FooterStatic from './FooterStatic'
 
 export { Alert, InfoModalButton, ActionModalButton, Collapse, Footer, Header, PageTitle, FooterStatic }
