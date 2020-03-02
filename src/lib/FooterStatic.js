@@ -34,7 +34,7 @@ class FooterStatic extends React.Component {
               <ul>
                 <li><a href={MSG.footer.organisation.library.url}>{MSG.footer.organisation.library.title}</a></li>
                 <li><a href={MSG.footer.organisation.library.url}>{MSG.footer.organisation.centers.title}</a></li>
-                <li><a href={MSG.footer.organisation.library.url}>{MSG.footer.organisation.principal.title}</a></li>
+                <li><a href={MSG.footer.organisation.library.url}>{MSG.footer.organisation.president.title}</a></li>
                 <li><a href={MSG.footer.organisation.library.url}>{MSG.footer.organisation.joint_business_support.title}</a></li>
               </ul>
             </div>
