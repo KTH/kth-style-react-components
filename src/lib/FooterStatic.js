@@ -76,7 +76,7 @@ class FooterStatic extends React.Component {
   }
 }
 
-Footer.defaultProps = {
+FooterStatic.defaultProps = {
   language: 'sv'
 }
 

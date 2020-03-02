@@ -462,7 +462,7 @@ class HeaderStatic extends React.Component {
     }
 }
 
-Header.defaultProps = {
+HeaderStatic.defaultProps = {
     url: 'https://www.kth.se/cm/',
     language: 'sv',
     appTitle: '',

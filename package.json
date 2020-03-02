@@ -1,6 +1,6 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
   "scripts": {
