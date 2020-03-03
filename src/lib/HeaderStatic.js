@@ -215,7 +215,7 @@ class HeaderStatic extends React.Component {
                                                                             <li><a href={MSG.header.infrastructures_and_resources.find_researchers.url}>{MSG.header.infrastructures_and_resources.find_researchers.title}</a></li>
                                                                             <li><a href={MSG.header.infrastructures_and_resources.innovation_and_commercialization.url}>{MSG.header.infrastructures_and_resources.innovation_and_commercialization.title}</a></li>
                                                                             <li><a href={MSG.header.infrastructures_and_resources.ranking.url}>{MSG.header.infrastructures_and_resources.ranking.title}</a></li>
-                                                                            <li><a href={MSG.header.infrastructures_and_resources.coperation.url}>{MSG.header.infrastructures_and_resources.cooperation.title}</a></li>
+                                                                            <li><a href={MSG.header.infrastructures_and_resources.cooperation.url}>{MSG.header.infrastructures_and_resources.cooperation.title}</a></li>
                                                                             <li><a href={MSG.header.infrastructures_and_resources.funding_support_external.url}>{MSG.header.infrastructures_and_resources.funding_support_external.title}</a></li>
                                                                             <li><a href={MSG.header.infrastructures_and_resources.research_infrastructure.url}>{MSG.header.infrastructures_and_resources.research_infrastructure.title}</a></li>
                                                                         </ul>
