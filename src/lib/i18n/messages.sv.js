@@ -1,4 +1,4 @@
-module.exports = {
+const MESSAGES = {
     title: 'Hantera e-post',
     description: {
         part1: 'Studerar du på KTH får du e-post från KTH, Ladok och Antagningen som gäller din utbildning. Läs mer om',
@@ -765,3 +765,4 @@ module.exports = {
         }
     }
 }
+export default MESSAGES

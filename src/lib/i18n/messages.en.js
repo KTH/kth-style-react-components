@@ -1,4 +1,4 @@
-module.exports = {
+const MESSAGES = {
     title: 'Manage email',
     description: {
         part1: 'When you study at KTH, you receive email regarding your education from KTH, Ladok and University admissions. Read more about',
@@ -766,3 +766,4 @@ module.exports = {
         }
     }
 }
+export default MESSAGES
