@@ -239,7 +239,7 @@ class HeaderStatic extends React.Component {
                                                             <div class="block columnSplitter row  using4Columns  " data-cid="1.202245" lang={LANGUAGE}>
                                                                 <div class="col c1">
                                                                     <div class="block list links" data-cid="1.876641" lang={LANGUAGE}>
-                                                                        <h2>{MSG.header.cooperation.collaborate_with_kth.title}</h2>
+                                                                        <h2>TEST</h2>
                                                                         <ul>
                                                                             <li><a href={MSG.header.cooperation.collaborate_with_kth.collaborate_with_us.url}>{MSG.header.cooperation.collaborate_with_kth.collaborate_with_us.title}</a></li>
                                                                             <li><a href={MSG.header.cooperation.collaborate_with_kth.collaboration_in_education.url}>{MSG.header.cooperation.collaborate_with_kth.collaboration_in_education.title}</a></li>
