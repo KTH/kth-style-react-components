@@ -7,6 +7,7 @@ module.exports = {
             displayText: 'Student records and services for students'
         },
     },
+    skiptToMainContent: 'Skip to main content',
     primaryKTHaddress: 'Email from KTH use your KTH email address:',
     ladokAntagningAddress: 'Emails sent from Ladok or University admissions are sent to email addresses specified in those systems, changes of email addresses have to be made in the specified system.',
     stepGuide: {
@@ -44,13 +45,14 @@ module.exports = {
         forwardSetTo: 'Forwarding of your KTH email address is set to:',
         noForwardSet: 'No email forwarding is set.',
         button: 'Forward KTH emails',
-        checkEmail: 'You need to verify your email addresses in step 1 and 2 and also select the checkbox (see red mark below).'
+        checkEmail: 'You need to verify your email addresses in step 1 and 2 and also select the checkbox (see mark below).'
     },
     emailForm: {
-        label: 'Enter email address for forwarding:',
+        label: 'Enter email address for forwarding',
         submit: 'Set email forwarding',
         remove: 'Remove email forwarding',
-        invalidFormat: 'Invalid format'
+        invalidFormat: 'Invalid format',
+        loopError: 'The address you entered is the default address for your email account. Your email is already delivered to this address by default.',
     },
     modal: {
         title: 'Remove email forwarding',
@@ -63,7 +65,7 @@ module.exports = {
     },
     setEmailForward: {
         successMsg: 'Forwarding of your KTH email is set',
-        errorMsg: 'The email address below is not valid.',
+        errorMsg: 'The email address you entered below is not valid.',
     },
     removeEmailForward: {
         successMsg: 'Forwarding of your KTH email has been removed. It can take a few minutes before you can return to KTH email service.'

@@ -7,6 +7,7 @@ module.exports = {
             displayText: 'Studiedokumentation och studenttjänsterna'
         },
     },
+    skiptToMainContent: 'Hoppa till huvudinnehållet',
     primaryKTHaddress: 'E-post från KTH använder din KTH e-postadress:',
     ladokAntagningAddress: 'E-post från Ladok och Antagningen använder e-postadresser angivna i de systemen och behöver ändras där.',
     stepGuide: {
@@ -44,13 +45,14 @@ module.exports = {
         forwardSetTo: 'Vidarebefordran av din KTH e-post är satt till:',
         noForwardSet: 'Ingen vidarebefordran är satt.',
         button: 'Vidarebefordra KTH e-post',
-        checkEmail: 'Du behöver kontrollera e-postadresser i steg 1 och 2 samt klarmarkera det (se röd markering nedan).'
+        checkEmail: 'Du behöver kontrollera e-postadresser i steg 1 och 2 samt klarmarkera det (se markering nedan).'
     },
     emailForm: {
         label: 'Ange e-postadress för vidarebefordran:',
         submit: 'Sätt vidarebefordran',
         remove: 'Ta bort vidarebefordran',
-        invalidFormat: 'Ej giltigt format'
+        invalidFormat: 'Ej giltigt format',
+        loopError: 'Adressen du gav är standardadressen för ditt e-postkonto. Din e-post leveras redan till denna adress.',
     },
     modal: {
         title: 'Ta bort vidarebefordran',
@@ -63,7 +65,7 @@ module.exports = {
     },
     setEmailForward: {
         successMsg: 'Vidarebefordran av din KTH e-post är satt',
-        errorMsg: 'E-postadressen nedan är inte giltig.',
+        errorMsg: 'E-postadressen du angivit nedan är inte giltig.',
     },
     removeEmailForward: {
         successMsg: 'Vidarebefordran av din KTH e-post är borttagen. Det kan ta några minuter innan du kan återgå till KTH:s e-posttjänst.'
