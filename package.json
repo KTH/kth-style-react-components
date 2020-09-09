@@ -1,6 +1,6 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.17.2",
+  "version": "0.18.0",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
   "scripts": {
@@ -47,10 +47,9 @@
   "dependencies": {
     "@babel/cli": "^7.6.0",
     "classnames": "^2.2.6",
-    "kth-node-cortina-block": "^3.0.5",
+    "kth-node-cortina-block": "^3.1.0",
     "kth-node-i18n": "^1.0.2",
-    "kth-node-log": "^3.0.2",
-    "kth-style": "^4.2.0",
+    "kth-node-log": "^3.1.0",
     "reactstrap": "^8.1.1"
   }
 }

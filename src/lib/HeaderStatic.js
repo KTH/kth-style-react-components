@@ -1,5 +1,4 @@
 import React from 'react'
-import cortina from 'kth-node-cortina-block'
 import i18n from './i18n'
 
 class HeaderStatic extends React.Component {
