@@ -7,7 +7,7 @@ module.exports = {
             displayText: 'Student records and services for students'
         },
     },
-    skiptToMainContent: 'Skip to main content',
+    skipToMainContent: 'Skip to main content',
     primaryKTHaddress: 'Email from KTH use your KTH email address:',
     ladokAntagningAddress: 'Emails sent from Ladok or University admissions are sent to email addresses specified in those systems, changes of email addresses have to be made in the specified system.',
     stepGuide: {

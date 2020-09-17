@@ -7,7 +7,7 @@ module.exports = {
             displayText: 'Studiedokumentation och studenttjänsterna'
         },
     },
-    skiptToMainContent: 'Hoppa till huvudinnehållet',
+    skipToMainContent: 'Hoppa till huvudinnehållet',
     primaryKTHaddress: 'E-post från KTH använder din KTH e-postadress:',
     ladokAntagningAddress: 'E-post från Ladok och Antagningen använder e-postadresser angivna i de systemen och behöver ändras där.',
     stepGuide: {
