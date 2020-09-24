@@ -3,6 +3,7 @@
   "version": "0.19.1",
   "description": "Library with react components implemented with KTH style ",
   "main": "dist/index.js",
+  "automaticPublish": "true",
   "scripts": {
     "test": "CI=true react-scripts test",
     "update-snapshots": "CI=true react-scripts test -u",
