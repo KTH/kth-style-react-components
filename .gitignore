@@ -11,6 +11,10 @@
 # production
 /dist
 
+# Built at startup
+dist
+.cache
+
 # misc
 .DS_Store
 .idea

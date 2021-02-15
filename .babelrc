@@ -1,1 +1,6 @@
-{ "presets": [["react-app", { "absoluteRuntime": false }]], "sourceType": "unambiguous" }
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
