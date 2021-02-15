@@ -40,8 +40,8 @@
     "eslint": "^6.6.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "kth-style": "^6.0.7"
   },
   "peerDependencies": {
