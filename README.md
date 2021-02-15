@@ -1,11 +1,14 @@
-KTH Style - React Components
-========
+# KTH Style - React Components
 
 ![Travis status](https://api.travis-ci.org/KTH/kth-style-react-components.svg?branch=master)
 
 ## Description
 
-This project is a work in progress. The purpose is to create an easy to use library in React with common components implemented with KTH style.
+This project is a work in progress.
+
+**As of 2021-02-12 we shall reboot this project. The new version (2.0) will do a new take on the components and also support Formik.**
+
+The purpose is to create an easy to use library in React with common components implemented with KTH style.
 
 ## Get started
 

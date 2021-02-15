@@ -1,1 +1,3 @@
-{ "extends": "react-app" }
+{
+  "extends": ["@kth/eslint-config-kth"]
+}

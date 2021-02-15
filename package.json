@@ -1,14 +1,12 @@
 {
   "name": "@kth/kth-style-react-components",
-  "version": "0.19.1",
-  "description": "Library with react components implemented with KTH style ",
+  "version": "2.0.0",
+  "description": "Library with react components implemented with KTH style",
   "main": "dist/index.js",
   "automaticPublish": "true",
   "scripts": {
-    "test": "CI=true react-scripts test",
-    "update-snapshots": "CI=true react-scripts test -u",
-    "build": "npm i && NODE_ENV=development babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "codefix": "prettier --write 'src/lib/*.js'"
+    "test": "echo 'OK'",
+    "build": "npm i && NODE_ENV=development babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "repository": {
     "type": "git",
@@ -16,7 +14,8 @@
   },
   "keywords": [
     "npm",
-    "kth"
+    "kth",
+    "react"
   ],
   "author": {
     "name": "KTH",
@@ -32,25 +31,18 @@
   "homepage": "https://github.com/KTH/kth-style-react-components#readme",
   "devDependencies": {
     "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "@kth/eslint-config-kth": "^1.0.9",
     "prettier": "^2.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.4.3",
-    "react-test-renderer": "^16.9.0",
-    "rimraf": "^3.0.0"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4"
   },
   "peerDependencies": {
     "react": ">= 16.3.0",
     "react-dom": ">= 16.3.0"
   },
   "dependencies": {
-    "@babel/cli": "^7.6.0",
-    "classnames": "^2.2.6",
-    "kth-node-cortina-block": "^3.1.0",
-    "kth-node-i18n": "^1.0.2",
-    "kth-node-log": "^3.1.0",
-    "reactstrap": "^8.1.1"
+    "react-bootstrap": "^1.4.3"
   }
 }
