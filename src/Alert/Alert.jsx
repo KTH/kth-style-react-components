@@ -2,7 +2,7 @@ import React from 'react'
 
 /**
  * @param {string} message - Message to be displayed
- * @param {('success'|'warning'|'danger')} type - Alert type
+ * @param {('success'|'info'|'danger')} type - Alert type
  */
 function Alert({ message, type }) {
   if (!message) {

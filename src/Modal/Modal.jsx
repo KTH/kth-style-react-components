@@ -1,6 +1,12 @@
 import React from 'react'
 import { Modal, Button } from 'react-bootstrap'
 
+/**
+ * @param {string} title - Title to be displayed
+ * @param {string} children - Modal body to be displayed
+ * @param {('true'|'false')} show - Modal visibility
+ */
+
 export default (props) => {
   const { show, onHide, children, title, sizeClass } = props
 
