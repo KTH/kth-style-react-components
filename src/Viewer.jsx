@@ -4,12 +4,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Viewer({ children, params = getParamsForComponent(children.type.name) }) {
-  const paramElements = getElementsForParams(params)
+  const [state, setState] = useState({})
+  const [paramElements, setParamElements] = useState([])
+
+  useEffect(() => {
+    setParamElements(getElementsForParams(params, state, setState))
+  }, [])
 
   return (
     <div>
       <div>{paramElements}</div>
-      {children}
+      {React.cloneElement(children, state)}
     </div>
   )
 }
@@ -42,20 +47,41 @@ const getParamsForComponent = (componentName) => {
   }
 }
 
-const getElementsForParams = (params) => {
-  return params.map((param) => {
-    if (param.type === 'string') {
-      return <input value={param.name}></input>
-    }
+const getElementsForParams = (params, state, setState) => {
+  const handleChange = (e) => {
+    const { id, value } = e.target
+    setState((prevState) => ({
+      ...prevState,
+      [id]: value
+    }))
+  }
 
-    if (Array.isArray(param.type)) {
+  const DEFAULT_STRING =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
+  const initialState = {}
+
+  const elements = params.map((param) => {
+    if (param.type === 'string') {
+      initialState[param.name] = DEFAULT_STRING
+
+      return <input onChange={handleChange} value={state[param.name]} id={param.name} />
+    } else if (Array.isArray(param.type)) {
+      const initalValue = param.type[param.type.length - 1].slice(1, -1)
+      initialState[param.name] = initalValue
+
       return (
-        <select name={param.name} id={param.name}>
-          {param.type.map((type) => (
-            <option value={type}>{type}</option>
-          ))}
+        <select name={param.name} id={param.name} onChange={handleChange} value={state[param.name]}>
+          {param.type.map((type) => {
+            const trimmedType = type.slice(1, -1)
+            return <option value={trimmedType}>{trimmedType}</option>
+          })}
         </select>
       )
     }
   })
+
+  setState(initialState)
+
+  return elements
 }
