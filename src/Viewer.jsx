@@ -51,14 +51,6 @@ const getParamsForComponent = (componentName) => {
 }
 
 const getElementsForParams = (params, state, setState) => {
-  // const handleChange = (e) => {
-  //   const { id, value } = e.target
-  //   setState((prevState) => ({
-  //     ...prevState,
-  //     [id]: value
-  //   }))
-  // }
-
   const DEFAULT_STRING =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
@@ -75,16 +67,18 @@ const getElementsForParams = (params, state, setState) => {
 
       return (
         <Select name={param.name} id={param.name}>
-          {param.type.map((type) => {
+          {param.type.map((type, index) => {
             const trimmedType = type.slice(1, -1)
-            return <option value={trimmedType}>{trimmedType}</option>
+            return (
+              <option key={`${type}-${index}`} value={trimmedType}>
+                {trimmedType}
+              </option>
+            )
           })}
         </Select>
       )
     }
   })
-
-  console.log(initialState)
 
   return [
     <Formik
