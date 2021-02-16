@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 import shortid from 'shortid'
 const PropTypes = require('prop-types')
 
-const { ensureObject, prepareAsyncSafeState } = require('../utils')
+// const { ensureObject, prepareAsyncSafeState } = require('../utils')
 
 const propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
@@ -14,7 +14,7 @@ const propTypes = {
   btnStyle: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger']),
   isBlockLevel: PropTypes.bool,
   disabled: PropTypes.bool,
-  className: PropTypes.string,
+  className: PropTypes.string
 }
 
 const defaultProps = {
@@ -22,7 +22,7 @@ const defaultProps = {
   btnStyle: 'primary',
   isBlockLevel: false,
   disabled: false,
-  className: '',
+  className: ''
 }
 
 export const STATE_NORMAL = 'normal'
@@ -83,17 +83,18 @@ function SubmitButton(props) {
 
   // }
 
-  const _getClassName = optionsBag => {
-    const { forceBtnStyle } = ensureObject(optionsBag)
+  const _getClassName = (optionsBag) => {
+    // const { forceBtnStyle } = ensureObject(optionsBag)
+    const { forceBtnStyle } = optionsBag
     const classList = [
       'SubmitButton',
       'btn',
       `btn-${forceBtnStyle || btnStyle}`,
       isBlockLevel ? 'btn-block' : null,
       className,
-      'SubmitButton-' + buttonsState,
+      'SubmitButton-' + buttonsState
     ]
-    return classList.filter(item => item).join(' ')
+    return classList.filter((item) => item).join(' ')
   }
 
   switch (buttonsState) {
@@ -122,7 +123,9 @@ function SubmitButton(props) {
       return (
         <button
           type="button"
-          className={_getClassName({ forceBtnStyle: btnStyle === 'success' ? 'secondary' : 'success' })}
+          className={_getClassName({
+            forceBtnStyle: btnStyle === 'success' ? 'secondary' : 'success'
+          })}
           disabled
         >
           <span className="inner">DONE</span>
@@ -133,7 +136,9 @@ function SubmitButton(props) {
       return (
         <button
           type="button"
-          className={_getClassName({ forceBtnStyle: btnStyle === 'danger' ? 'secondary' : 'danger' })}
+          className={_getClassName({
+            forceBtnStyle: btnStyle === 'danger' ? 'secondary' : 'danger'
+          })}
           disabled
         >
           <span className="inner">FAILED</span>

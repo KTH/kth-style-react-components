@@ -5,9 +5,10 @@
   "main": "dist/index.js",
   "automaticPublish": "true",
   "scripts": {
-    "start": "parcel dev/index.html --open",
+    "start": "npm run build-jsdoc && parcel dev/index.html",
     "test": "echo 'OK'",
-    "build": "echo 'Nothing to build'"
+    "build": "echo 'Nothing to build'",
+    "build-jsdoc": "jsdoc -X ./src/Alert/  > jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -38,17 +39,26 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "eslint": "^7.20.0",
-    "parcel-bundler": "^1.12.4",
+    "kth-style": "^6.0.7",
+    "jsdoc": "^3.6.6",
+    "parcel": "^2.0.0-beta.1",
+    "postcss": "^8.2.6",
     "prettier": "^2.1.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "kth-style": "^6.0.7"
+    "react-dom": "^17.0.1"
   },
   "peerDependencies": {
     "react": ">= 16.3.0",
     "react-dom": ">= 16.3.0"
   },
   "dependencies": {
-    "react-bootstrap": "^1.4.3"
+    "formik": "^2.2.6",
+    "react-bootstrap": "^1.4.3",
+    "shortid": "^2.2.16"
+  },
+  "@parcel/bundler-default": {
+    "minBundles": 2,
+    "minBundleSize": 3,
+    "maxParallelRequests": 20
   }
 }

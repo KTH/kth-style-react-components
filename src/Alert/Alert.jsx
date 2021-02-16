@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Alert({ alertMessage }) {
-  const { message, type } = alertMessage
-
-  if (!alertMessage) {
+/**
+ * @param {string} message - Message to be displayed
+ * @param {('success'|'warning'|'danger')} type - Alert type
+ */
+function Alert({ message, type }) {
+  if (!message) {
     return null
   }
 
