@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
+import Input from './formik/Input/Input'
+import Select from './formik/Select/Select'
+import { Formik, Form } from 'formik'
 
 import PropTypes from 'prop-types'
 
@@ -48,13 +51,13 @@ const getParamsForComponent = (componentName) => {
 }
 
 const getElementsForParams = (params, state, setState) => {
-  const handleChange = (e) => {
-    const { id, value } = e.target
-    setState((prevState) => ({
-      ...prevState,
-      [id]: value
-    }))
-  }
+  // const handleChange = (e) => {
+  //   const { id, value } = e.target
+  //   setState((prevState) => ({
+  //     ...prevState,
+  //     [id]: value
+  //   }))
+  // }
 
   const DEFAULT_STRING =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -65,23 +68,33 @@ const getElementsForParams = (params, state, setState) => {
     if (param.type === 'string') {
       initialState[param.name] = DEFAULT_STRING
 
-      return <input onChange={handleChange} value={state[param.name]} id={param.name} />
+      return <Input name={param.name} id={param.name} />
     } else if (Array.isArray(param.type)) {
       const initalValue = param.type[param.type.length - 1].slice(1, -1)
       initialState[param.name] = initalValue
 
       return (
-        <select name={param.name} id={param.name} onChange={handleChange} value={state[param.name]}>
+        <Select name={param.name} id={param.name}>
           {param.type.map((type) => {
             const trimmedType = type.slice(1, -1)
             return <option value={trimmedType}>{trimmedType}</option>
           })}
-        </select>
+        </Select>
       )
     }
   })
 
-  setState(initialState)
+  console.log(initialState)
 
-  return elements
+  return [
+    <Formik
+      initialValues={initialState}
+      onSubmit={(values) => {
+        console.log(values)
+        setState(values)
+      }}
+    >
+      {(props) => <Form onChange={() => props.handleSubmit()}>{elements}</Form>}
+    </Formik>
+  ]
 }
