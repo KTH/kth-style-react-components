@@ -8,7 +8,7 @@
     "start": "npm run build-jsdoc && parcel dev/index.html",
     "test": "echo 'OK'",
     "build": "echo 'Nothing to build'",
-    "build-jsdoc": "jsdoc -X ./src/Alert/  > jsdoc.json"
+    "build-jsdoc": "jsdoc -X ./src/components/**/*  > jsdoc.json"
   },
   "repository": {
     "type": "git",

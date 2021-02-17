@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
-import Input from './formik/Input/Input'
-import Select from './formik/Select/Select'
+import Input from '../src/components/formik/Input/Input'
+import Select from '../src/components/formik/Select/Select'
 import { Formik, Form } from 'formik'
 
 import PropTypes from 'prop-types'
@@ -13,6 +13,10 @@ export default function Viewer({ children, params = getParamsForComponent(childr
   useEffect(() => {
     setParamElements(getElementsForParams(params, state, setState))
   }, [])
+
+  useEffect(() => {
+    setParamElements(getElementsForParams(params, state, setState))
+  }, [state])
 
   return (
     <div>

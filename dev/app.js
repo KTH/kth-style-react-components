@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { Button } from 'react-bootstrap'
-import Viewer from '../src/Viewer'
+import Viewer from './Viewer'
 import { Alert, Modal } from '../src/index'
 import 'kth-style/dist/css/kth-bootstrap.css'
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Viewer>
-        <Alert message="aj aj" type="danger" />
+        <Alert />
       </Viewer>
 
       {/* TODO: Modal needs to be wrapped in Viewer? */}

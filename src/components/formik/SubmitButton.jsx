@@ -39,7 +39,6 @@ export const STATE_FAILED = 'failed'
  *
  * @param {object} props
  * @param {string|JSX.Element|JSX.Element[]} props.children
- * @param {() => Promise} props.onClickAsync
  * @param {string} [props.status]
  * @param {string} [props.btnStyle]
  * @param {boolean} [props.isBlockLevel]

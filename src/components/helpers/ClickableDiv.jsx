@@ -5,7 +5,7 @@
 const React = require('react')
 const PropTypes = require('prop-types')
 
-const { ensureObject } = require('../utils/objects')
+const { ensureObject } = require('../../utils/objects')
 
 module.exports = ClickableDiv
 
