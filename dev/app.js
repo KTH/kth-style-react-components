@@ -25,7 +25,7 @@ function App() {
         Modal button
       </Button>
 
-      <Formik initialValues="">
+      <Formik initialValues={{ 'text-editor': 'Some initial text example' }}>
         <Form>
           <TextEditor
             id="text-editor"
