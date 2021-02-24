@@ -1,6 +1,7 @@
-import React, { Children } from 'react'
+import React from 'react'
 import { useField, useFormikContext, getIn } from 'formik'
-import { Form, InputGroup } from 'react-bootstrap'
+import { FormGroup, Label, Input, FormFeedback } from 'reactstrap'
+
 import { Badges, ClickableDiv } from '../../helpers'
 
 export default ({ children, label, onInfoClick, helpText, ...props }) => {
@@ -20,25 +21,25 @@ export default ({ children, label, onInfoClick, helpText, ...props }) => {
   const hasError = internalMeta && internalMeta.touched && internalMeta.error
 
   return (
-    <Form.Group>
-      <Form.Label htmlFor={props.name}>
+    <FormGroup>
+      <Label htmlFor={props.name}>
         {label}
         {typeof onInfoClick === 'function' && (
           <ClickableDiv className="glyphicon glyphicon-info-sign" onClick={onInfoClick} />
         )}
-      </Form.Label>
+      </Label>
 
       <div className="select-wrapper">
-        <Form.Control as="select" isInvalid={hasError} {...internalField} {...props}>
+        <Input type="select" invalid={hasError} {...internalField} {...props}>
           {children}
-        </Form.Control>
+        </Input>
       </div>
 
       {hasError || statusInternal ? (
-        <Form.Control.Feedback style={{ display: 'block' }} type="invalid" className="error">
+        <FormFeedback style={{ display: 'block' }} type="invalid" className="error">
           {internalMeta.error || getIn(statusInternal, internalField.name)}
-        </Form.Control.Feedback>
+        </FormFeedback>
       ) : null}
-    </Form.Group>
+    </FormGroup>
   )
 }
