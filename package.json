@@ -2,7 +2,7 @@
   "name": "@kth/kth-style-react-components",
   "version": "2.0.0",
   "description": "Library with react components implemented with KTH style",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "automaticPublish": "true",
   "scripts": {
     "start": "bash ./build.sh && npm run build-jsdoc && parcel dev/index.html",
