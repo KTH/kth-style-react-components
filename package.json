@@ -35,7 +35,7 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
-    "@kth/eslint-config-kth": "^2.0.2",
+    "@kth/eslint-config-kth": "^3.0.14",
     "@kth/kth-ckeditor-build": "^4.0.13",
     "@parcel/optimizer-cssnano": "^2.8.3",
     "@parcel/optimizer-htmlnano": "^2.8.3",
